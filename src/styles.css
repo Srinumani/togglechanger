@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+}
+.black {
+  color: white;
+  background-color: black;
+}
+
+.white {
+  color: black;
+  background-color: white;
+}
+.conatiner {
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 50px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: greenyellow;
+  transition: 0.4s;
+  border-radius: 35%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(38, 18, 18);
+  transition: 0.4s;
+  border-radius: 100%;
+}
+
+input:checked + .slider {
+  background-color: rgb(235, 226, 226);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
